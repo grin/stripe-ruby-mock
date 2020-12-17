@@ -455,7 +455,7 @@ module StripeMock
         plan: nil,
         description: "Test invoice item",
         metadata: {}
-      }.merge(params)
+      }.merge(params).merge(price: params[:plan])
     end
 
     def self.mock_invoice_item(params = {})
